@@ -1,6 +1,6 @@
-// Import stylesheets
-import './style.css';
+process.on('uncaughtException', function (err) {
+  console.error(`\x1b[31m\x1b[40m${err}\x1b[0m`);
+  process.exit(1);
+});
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+import server from "./lib/app";
